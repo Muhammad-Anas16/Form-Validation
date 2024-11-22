@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="main">
+
+            <!-- first section  -->
+
+            <section class="theForm" id="pushData">
+
+                <h1>submit form</h1>
+
+                <form id="firstForm" action="" onsubmit="toSubmit(event, 'push')">
+                    <div class="inputDiv">
+                        <input type="text" placeholder="User Name" onInput="dataInput(event, 'user')" id="userName">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                    <div id="data1" class="data">Name</div>
+
+                    <div class="inputDiv">
+                        <input type="email" placeholder="Email Address" onInput="dataInput(event, 'email')"
+                            id="userEmail">
+                        <i class="fa-solid fa-at"></i>
+                    </div>
+                    <div id="data2" class="data">Email</div>
+
+                    <div class="inputDiv">
+                        <input type="password" placeholder="Password" onInput="dataInput(event, 'password')"
+                            id="userPass">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <div id="data3" class="data">Password</div>
+
+                    <div class="inputDiv submitBtn" >
+                        <input type="submit"  class="submit">
+                    </div>
+
+                </form>
+
+            </section>
+
+            <!-- second section  -->
+
+            <section class="theForm" id="checkData">
+
+                <h1>check Data</h1>
+
+                <form action="" id="secondForm" onsubmit="toSubmit(event, 'check')">
+                    <div class="checkInp">
+                        <div class="inputDiv">
+
+                            <input type="email" placeholder="Email Address" id="checkEmail"><br>
+                            <i class="fa-solid fa-at"></i>
+                        </div><br>
+
+                        <div class="inputDiv submitBtn">
+                            <input type="submit" class="submit">
+                        </div><br>
+
+                    </div>
+
+                </form>
+
+                <div class="userDetails">
+                    <h3>Name : <span class="userDetails-Span" id="userDetail-Name">$$$</span></h3>
+                    <h3>Email : <span class="userDetails-Span" id="userDetail-Email">$$@gmail.com</span></h3>
+                    <h3>Password : <span class="userDetails-Span" id="userDetail-Pass">$$$$</span></h3>
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
